@@ -10,14 +10,14 @@ export default class Flip extends Component {
     let rand=Math.floor(Math.random()*2)+1
     if(rand===1){
         this.setState({src:"./head.png"})
-        this.setState({head :this.state.head+1})
+        this.setState(st=>({head :st.head+1}))
     }
     else {
         this.setState({src:"./tail.png"})
-        this.setState({tail :this.state.tail+1})
+        this.setState(st=>({tail :st.tail+1}))
 
     }
-    this.setState({try :this.state.try+1})
+    this.setState(st=>({try :st.try+1}))
   };
   handleClick=()=>{
       this.random()
